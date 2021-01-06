@@ -1,0 +1,74 @@
+<head>
+    <script src="sdk.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="myVideo" ></div>
+    </div>
+    <br>
+    <br>
+    <div id="videoInfo">
+        text is here
+    </div>
+
+
+
+    <script type="text/javascript">
+        var videos = [
+            "vi7RSVfjmrCmQZgS12j7VW5X", //bagpipes
+            "vi4uIigPjKOXiVnBGLjHDIMs",
+            "vi3DZ8BOJBt3DxqenDSDXL1Z",
+            "vi1rdVw3OxmAzpCM7mJmlz2c"
+        ];
+        var counter =0;
+
+
+
+
+     
+
+
+//htthttps://go.api.https://go.api.video/videos//videos/
+        window.onload = createVideo(counter);
+
+        function createVideo(counter) {
+            console.log("video", counter +videos[counter]);
+            window.player = new PlayerSdk("#myVideo", { 
+               id: videos[counter], 
+                autoplay: true
+                // ... other optional options s
+            });
+            player.addEventListener('play', function() { 
+                //console.log("playing");
+                onPlay(counter);
+            });
+            player.addEventListener('ended',function() { 
+                console.log("ended");
+                counter ++;
+                //if we hit the end of the array - start over again
+                if (counter == videos.length){
+                    counter = 0;
+                }
+                onEnd(counter);
+            });
+    
+        }
+        
+        
+        function onPlay(counter) {
+           // console.log("onPlay");
+            console.log("counter" ,counter);
+            document.getElementById('videoInfo').innerHTML = "video playing " + counter;
+            console.log("video playing");
+        }
+        function onEnd(counter){
+            //console.log("onEnd");
+            document.getElementById('videoInfo').innerHTML = "video over" ;
+            //console.log("video over");
+            player.destroy();
+            //video is over - so start another one...
+            createVideo(counter);
+        }
+    </script>
+
+</body>
