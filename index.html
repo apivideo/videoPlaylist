@@ -24,7 +24,14 @@
     <title>Video Playlist</title>
 </head>
 <body>
-    <div id="myVideo" ></div>
+    
+    <div id="video">
+        <img id="prev" src = "prev.png">
+        <div id="myVideo" ></div>
+        <img id="next" src = "next.png">
+
+
+    </div>
     <br>
     <br>
     <div id="videoInfo">
@@ -50,6 +57,31 @@
 
 //htthttps://go.api.https://go.api.video/videos//videos/
         window.onload = createVideo(counter);
+
+        document.getElementById("prev").onclick = function() {
+            console.log(counter);
+            counter--;
+            console.log(counter);
+            if( counter < 0){
+                counter = videos.length -1;
+            }
+            console.log(counter);
+            player.destroy();
+            createVideo(counter);
+        }
+        document.getElementById("next").onclick = function() {
+            console.log(counter);
+            console.log(videos.length);
+            counter ++;
+            if( counter ==videos.length){
+                counter =0;
+            }
+            console.log(counter);
+            player.destroy();
+            createVideo(counter);
+        }
+        
+
 
         function createVideo(counter) {
             console.log("video", counter +videos[counter]);

@@ -1,8 +1,28 @@
-#myVideo{
+#video{
     width: 100%;
+    height:50%;
+    padding: 10px;
+    
+}
+#prev{
+    width:12.5%;
+    float: left;
+}
+#myVideo{
+    width: 70%;
     height: 47%;
+    position:absolute;
+    left: 15%;
+   
+}
+#next{
+    width:12.5%;
+    float: right;
 
 }
 #videoInfo{
+    padding:5%;
+    width: 100%;
+    
     font-size: x-large;
 }
