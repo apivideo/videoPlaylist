@@ -59,24 +59,18 @@
         window.onload = createVideo(counter);
 
         document.getElementById("prev").onclick = function() {
-            console.log(counter);
             counter--;
-            console.log(counter);
             if( counter < 0){
                 counter = videos.length -1;
             }
-            console.log(counter);
             player.destroy();
             createVideo(counter);
         }
         document.getElementById("next").onclick = function() {
-            console.log(counter);
-            console.log(videos.length);
             counter ++;
             if( counter ==videos.length){
                 counter =0;
             }
-            console.log(counter);
             player.destroy();
             createVideo(counter);
         }
