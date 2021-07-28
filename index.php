@@ -1,1 +1,1 @@
-<?php include_once("videoPlaylist/index.html"); ?>
+<?php include_once("playlist/index.html"); ?>
