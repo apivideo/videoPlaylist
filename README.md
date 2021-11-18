@@ -6,11 +6,13 @@
 
 ![](https://github.com/apivideo/API_OAS_file/blob/master/apivideo_banner.png)
 
-[api.video](https://api.video) is an API that encodes on the go to facilitate immediate playback, enhancing viewer streaming experiences across multiple devices and platforms. You can stream live or on-demand online videos within minutes.
+<h1 align="center">api.video watcha. video playlist</h1>
+
+[api.video](https://api.video) is the video infrastructure for product builders. Lightning fast video APIs for integrating, scaling, and managing on-demand & low latency live streaming features in your app.
 
 # videoPlaylist
 
-Same JS app that reads an array of [api.video](https://api.video)  videoIds.  Creates a video player, and then when the video is done - destroys the player, and creates a new player - with the next videoId
+A basic HTML & JavaScript app that reads an array of [api.video](https://api.video) videoIds.  Using the [api.video player SDK](https://docs.api.video/docs/video-player-sdk), the app creates a video player, and then when the video is done - destroys the player, and creates a new player - with the next videoId
 
 This essentially creates a "playlist"  Each video in the array will be played: one after another.
 
